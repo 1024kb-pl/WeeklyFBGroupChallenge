@@ -17,6 +17,8 @@ public class Main<T> {
 
         return newArr;
     }
+
+    @SuppressWarnings("unchecked")
     private T [] removeDuplicates(T [] arr) {
         Object [] newArr = new Object[arr.length];
 
