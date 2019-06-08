@@ -1,6 +1,8 @@
 package com.company;
 
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Main<T> {
     private Object [] removeNull(Object [] arr) {
@@ -46,5 +48,11 @@ public class Main<T> {
         Arrays.stream(new Main<String>().removeDuplicates(sDuplicates)).forEach(System.out::println);
         Arrays.stream(new Main<Float>().removeDuplicates(fDuplicates)).forEach(System.out::println);
         Arrays.stream(new Main<Integer>().removeDuplicates(iDuplicates)).forEach(System.out::println);
+
+        new Main<Integer>().forbiddenSolutionUsingJavaCollection(iDuplicates).forEach(System.out::println);
+    }
+
+    private Set<T> forbiddenSolutionUsingJavaCollection(T [] arr) {
+        return new HashSet<>(Arrays.asList(arr));
     }
 }
