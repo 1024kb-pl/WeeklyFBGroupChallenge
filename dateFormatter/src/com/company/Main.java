@@ -20,7 +20,6 @@ public class Main {
 
         while (group.find()) {
             String date = group.group();
-            System.out.println(date);
             date = date.replace("/", "-");
             date = date.replace(".", "-");
 
