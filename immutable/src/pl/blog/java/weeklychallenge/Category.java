@@ -1,12 +1,24 @@
 package pl.blog.java.weeklychallenge;
 
 class Category {
-    public Long id;
-    public String name;
+    private Long id;
+    private String name;
 
     public Category(Long id, String name) {
         this.id = id;
         this.name = name;
+    }
+
+    public Category(Category category) {
+        this(category.id, category.name);
+    }
+
+    @Override
+    public String toString() {
+        return "Category{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
     }
 
     public Long getId() {
