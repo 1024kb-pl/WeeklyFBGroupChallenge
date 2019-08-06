@@ -1,5 +1,7 @@
 package pl.blog.java;
 
+import pl.blog.java.validation.CalendarValidationService;
+
 import java.util.UUID;
 
 public class CalendarMetadataService {

@@ -27,19 +27,19 @@ public class CalendarDAO {
         return new LinkedList<>(calendars.values());
     }
     
-    List<Calendar> getUserCalendars() {
+    public List<Calendar> getUserCalendars() {
         return getCalendars().stream()
                 .filter(c -> c.getScope() == Scope.USER)
                 .collect(Collectors.toList());
     }
     
-    List<Calendar> getGlobalCalendars() {
+    public List<Calendar> getGlobalCalendars() {
         return getCalendars().stream()
                 .filter(c -> c.getScope() == Scope.GLOBAL)
                 .collect(Collectors.toList());
     }
     
-    List<Calendar> getProjectCalendars() {
+    public List<Calendar> getProjectCalendars() {
         return getCalendars().stream()
                 .filter(c -> c.getScope() == Scope.PROJECT)
                 .collect(Collectors.toList());
