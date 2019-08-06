@@ -28,7 +28,7 @@ public class CalendarValidationService {
     private void validateValidatorQuantity(List<AbstractCalendarValidator> validators) {
         int scopes = Scope.values().length;
         if (validators.size() < scopes) {
-            throw new RuntimeException("There are not strategies (size: " + validators.size() + " for all enums values (size: " + scopes + ").");
+            throw new RuntimeException("There are not strategies (size: " + validators.size() + ") for all enums values (size: " + scopes + ").");
         }
     }
 

@@ -5,9 +5,9 @@ import pl.blog.java.CalendarDAO;
 import pl.blog.java.Scope;
 
 public abstract class AbstractCalendarValidator {
-    protected final CalendarDAO calendarDAO;
+    final CalendarDAO calendarDAO;
 
-    protected AbstractCalendarValidator(CalendarDAO calendarDAO) {
+    AbstractCalendarValidator(CalendarDAO calendarDAO) {
         this.calendarDAO = calendarDAO;
     }
 
